@@ -1,0 +1,13 @@
+[Unit]
+Description=C-U MTD data collection service
+
+[Service]
+Restart=always
+Type=simple
+WorkingDirectory=/PATH/TO/mtddata
+ExecStart=/PATH/TO/mtddata/mtddata
+StandardOutput=file:/PATH/TO/mtddata/stdout.log
+StandardError=file:/PATH/TO/mtddata/stderr.log
+
+[Install]
+WantedBy=multi-user.target
