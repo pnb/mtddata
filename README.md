@@ -8,6 +8,8 @@ Settings are controlled via environment variables, with a `.env` file if you lik
 
 You will need an API key from MTD to use this. Also note that they have rate limits, and they explicitly say not to try to get all stops. So set the settings accordingly.
 
+Build with `go build`.
+
 To run as a service, copy the `mtddata.service` file to `/etc/systemd/system/mtddata.service` and edit the paths to match your setup. Then run:
 
 ```
