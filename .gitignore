@@ -1,3 +1,5 @@
+# Executable
+mtddata
 # Output files
 *.jsonl
 # Vim swap files
