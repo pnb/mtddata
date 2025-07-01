@@ -6,8 +6,8 @@ Restart=always
 Type=simple
 WorkingDirectory=/PATH/TO/mtddata
 ExecStart=/PATH/TO/mtddata/mtddata
-StandardOutput=file:/PATH/TO/mtddata/stdout.log
-StandardError=file:/PATH/TO/mtddata/stderr.log
+StandardOutput=append:/PATH/TO/mtddata/stdout.log
+StandardError=append:/PATH/TO/mtddata/stderr.log
 
 [Install]
 WantedBy=multi-user.target
