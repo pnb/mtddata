@@ -90,20 +90,20 @@ func main() {
 		for _, stopID := range stopIDs {
 			data, err := fetchDepartures(stopID)
 			if err != nil {
-				log.Print("Failed to fetch departures for stop", stopID, ":", err)
+				log.Println("Failed to fetch departures for stop", stopID, ":", err)
 				continue
 			}
 			if err := saveToJSONL(data, os.Getenv("MTDDATA_OUTPUT_PATH")); err != nil {
-				log.Print("Failed to save departures data for stop", stopID, ":", err)
+				log.Println("Failed to save departures data for stop", stopID, ":", err)
 				continue
 			}
 		}
 		if weatherPath != "" {
 			data, err := fetchWeather()
 			if err != nil {
-				log.Print("Failed to fetch weather:", err)
+				log.Println("Failed to fetch weather:", err)
 			} else if err := saveToJSONL(data, weatherPath); err != nil {
-				log.Print("Failed to save weather data:", err)
+				log.Println("Failed to save weather data:", err)
 			}
 		}
 		log.Println("Fetched and saved departures data for", len(stopIDs), "stops")
